@@ -7,7 +7,7 @@
     android:background="@color/background_splash"
 
 
-    tools:context="com.example.logonrm.carros.SplashActivity">
+    tools:context="com.example.logonrm.carros.ui.splash.SplashActivity">
 
     <ImageView
         android:id="@+id/ivLogoSplash"

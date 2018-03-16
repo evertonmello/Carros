@@ -2,7 +2,9 @@ package com.example.logonrm.carros.api
 
 import com.example.logonrm.carros.model.Carro
 import retrofit2.Call
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 
 /**
  * Created by logonrm on 10/03/2018.
@@ -10,5 +12,9 @@ import retrofit2.http.GET
 interface CarroApi{
     @GET("/carro")
     fun buscarTodos():Call<List<Carro>>
+
+    @POST("/carro")
+    fun salvar(@Body carro: Carro): Call<Void>
+
 
 }

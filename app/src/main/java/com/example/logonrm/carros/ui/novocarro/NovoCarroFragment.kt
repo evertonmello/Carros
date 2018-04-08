@@ -25,15 +25,16 @@ import retrofit2.Response
 class NovoCarroFragment : Fragment() {
 
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater!!.inflate(R.layout.fragment_novo_carro, container, false)
-    }
+        override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+                                  savedInstanceState: Bundle?): View? {
+            // Inflate the layout for this fragment
+            return inflater!!.inflate(R.layout.fragment_novo_carro, container, false)
+        }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btSalvar.setOnClickListener{
+            Log.e("Q", "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
             val api = RetrofitClient
                     .getInstance()
                     .create(CarroApi::class.java)

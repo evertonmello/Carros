@@ -36,11 +36,11 @@ class ListaCarrosFragment : Fragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        carregarDados()
+        //carregarDados()
     }
 
     fun carregarDados(){
-        val api = RetrofitClient.getInstance("https://carroapi-evertonmello.herokuapp.com")
+        val api = RetrofitClient.getInstance()
                 .create(CarroApi::class.java)
 
         loading.visibility = View.VISIBLE

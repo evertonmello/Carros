@@ -23,7 +23,10 @@
         <activity
             android:name=".ui.main.MainActivity"
             android:label="@string/title_activity_main" />
-        <activity android:name=".ui.login.LoginActivity"></activity>
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.editCarro.EditarCarroActivity" />
+        <activity android:name=".ui.BuscarActivity" />
+        <activity android:name=".ui.buscarCarro.BuscarActivity"></activity>
     </application>
 
 </manifest>

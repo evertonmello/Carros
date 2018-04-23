@@ -4,6 +4,7 @@ package com.example.logonrm.carros.ui.listacarros
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,7 +37,7 @@ class ListaCarrosFragment : Fragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //carregarDados()
+        carregarDados()
     }
 
     fun carregarDados(){
@@ -44,8 +45,8 @@ class ListaCarrosFragment : Fragment() {
                 .create(CarroApi::class.java)
 
         loading.visibility = View.VISIBLE
-        api.buscarTodos().enqueue(object: Callback<List<Carro>>{
 
+        api.buscarTodos().enqueue(object: Callback<List<Carro>>{
             override fun onFailure(call: Call<List<Carro>>?, t: Throwable?) {
                 containerErro.visibility = View.VISIBLE
                 tvMsgErro.text = t?.message

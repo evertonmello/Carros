@@ -12,6 +12,11 @@
         android:title="Novo Carro" />
 
     <item
+        android:id="@+id/navigation_buscar"
+        android:icon="@drawable/magnify"
+        android:title="Buscar" />
+
+    <item
         android:id="@+id/navigation_sobre"
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="Sobre o app" />

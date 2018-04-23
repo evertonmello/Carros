@@ -7,8 +7,10 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.app.AppCompatDialogFragment
 import android.widget.Toast
 import com.example.logonrm.carros.R
+import com.example.logonrm.carros.ui.buscarCarro.BuscarFragment
 import com.example.logonrm.carros.ui.listacarros.ListaCarrosFragment
 import com.example.logonrm.carros.ui.novocarro.NovoCarroFragment
+import com.example.logonrm.carros.ui.sobre.SobreFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +26,12 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_sobre-> {
-                Toast.makeText(this, "Em construcao", Toast.LENGTH_LONG).show()
+                changeFragment(SobreFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+
+            R.id.navigation_buscar-> {
+                changeFragment(BuscarFragment())
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -42,5 +49,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        changeFragment(ListaCarrosFragment())
     }
 }

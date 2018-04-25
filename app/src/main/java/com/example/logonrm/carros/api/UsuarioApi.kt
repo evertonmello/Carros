@@ -13,5 +13,9 @@ interface UsuarioApi {
     fun buscarTodos(): Call<List<Usuario>>
 
     @POST("/login")
+    fun logar(@Body usuario: Usuario): Call<Void>
+
+    @POST("/login/new")
     fun salvar(@Body usuario: Usuario): Call<Void>
+
 }
